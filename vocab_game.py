@@ -60,7 +60,7 @@ def show_result_dialog(ans1, ans2):
         st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
 
     # ตรวจข้อ 4
-    if u_ans2 == "cat":
+    if u_ans2 == "balloon":
         st.success("✅ ข้อ 4: ถูกต้อง")
         score += 1
     else:
@@ -99,6 +99,15 @@ ans2 = st.text_input(
     "ข้อ 2: Cats love to eat `f _ s h`. 🐟",
     value=st.session_state.ans2_val,
 )
+ans3 = st.text_input(
+    "ข้อ 3: An `a _ _ l e` a day keeps the doctor away. 🍍",
+    value=st.session_state.ans1_val,
+)
+ans4 = st.text_input(
+    "ข้อ 4: Cats love to eat `f _ s h`. 🎈",
+    value=st.session_state.ans2_val,
+)
+
 
 # อัปเดตค่าล่าสุดเข้าตัวแปร
 st.session_state.ans1_val = ans1
